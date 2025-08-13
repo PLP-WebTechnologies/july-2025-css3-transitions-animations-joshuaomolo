@@ -1,0 +1,44 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 2rem;
+  background-color:rgb(216, 202, 202);
+}
+
+#myanim {
+  background: red;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#myanim:hover {
+  background:black;
+  transform: scale(1.05);
+  color:green;
+}
+
+/* Initial box style */
+#box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  margin: 2rem auto;
+  transition: transform 0.5s ease, background 0.5s ease;
+}
+
+/* Animated state */
+.box-animate {
+  animation: spinAndGrow 2s forwards;
+}
+
+/* Continuous keyframe animation */
+@keyframes spinAndGrow {
+  0% { transform: rotate(0) scale(1); background: green; } /*green */
+  50% { transform: rotate(180deg) scale(1.5); background: black; }/*black */
+  100% { transform: rotate(360deg) scale(1); background: white; }/*white */
+}
